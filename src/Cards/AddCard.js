@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
 
 import { readDeck, createCard } from "../utils/api/index";
+import CardForm from "./CardForm";
 
 function AddCard() {
   const history = useHistory();
@@ -47,7 +48,6 @@ function AddCard() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     await createCard(deckId, formData);
     setFormData(initialFormState);
   };
@@ -68,39 +68,26 @@ function AddCard() {
 
       <h1>{deck.name}: Add Card</h1>
 
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="front">Front</label>
-          <textarea
-            type="textarea"
-            id="front"
-            className="form-control"
-            placeholder="Front side of card"
-            value={formData.front}
-            onChange={handleFrontChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="back">Back</label>
-          <textarea
-            type="textarea"
-            id="back"
-            className="form-control"
-            placeholder="Back side of card"
-            value={formData.back}
-            onChange={handleBackChange}
-          />
-        </div>
-        <button
-          className="btn btn-secondary mx-1 my-3"
-          onClick={() => history.push(`/decks/${deckId}`)}
-        >
-          Done
-        </button>
-        <button type="submit" className="btn btn-primary mx-1 my-3">
-          Save
-        </button>
-      </form>
+      <CardForm
+        deck={deck}
+        formData={formData}
+        handleFrontChange={handleFrontChange}
+        handleBackChange={handleBackChange}
+      />
+
+      <button
+        className="btn btn-secondary mx-1 my-3"
+        onClick={() => history.push(`/decks/${deckId}`)}
+      >
+        Done
+      </button>
+      <button
+        type="submit"
+        className="btn btn-primary mx-1 my-3"
+        onClick={handleSubmit}
+      >
+        Save
+      </button>
     </div>
   );
 }

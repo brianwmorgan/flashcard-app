@@ -40,7 +40,11 @@ function DeckList() {
             <h3>{`${deck.name}`}</h3>
           </div>
           <div className="card-subtitle">
-            <h6>{`${deck.cards.length} cards`}</h6>
+            {deck.cards.length === 1 ? (
+              <h6>{`${deck.cards.length} card`}</h6>
+            ) : (
+              <h6>{`${deck.cards.length} cards`}</h6>
+            )}
           </div>
           <div className="card-text">{`${deck.description}`}</div>
           <button

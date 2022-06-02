@@ -25,7 +25,6 @@ function EditDeck() {
   }, [deckId]);
 
   const handleNameChange = (event) => {
-    // setDeckName ... etc
     setDeck({
       ...deck,
       name: event.target.value,
