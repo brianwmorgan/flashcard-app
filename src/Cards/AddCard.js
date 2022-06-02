@@ -13,7 +13,7 @@ function AddCard() {
     back: "",
   };
 
-  const [formData, setFormData] = useState({ ...initialFormState });
+  const [formData, setFormData] = useState(initialFormState);
 
   useEffect(() => {
     async function fetchData() {
@@ -49,7 +49,7 @@ function AddCard() {
     event.preventDefault();
 
     await createCard(deckId, formData);
-    history.push(`/decks/${deckId}`);
+    setFormData(initialFormState);
   };
 
   return (
