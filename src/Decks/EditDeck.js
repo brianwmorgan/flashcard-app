@@ -6,14 +6,16 @@ import { readDeck, updateDeck } from "../utils/api/index";
 function EditDeck() {
   const history = useHistory();
   const { deckId } = useParams();
-  const [deck, setDeck] = useState({});
+  const [deckName, setDeckName] = useState("");
+  const [deckDescription, setDeckDescription] = useState("");
 
   useEffect(() => {
     async function fetchData() {
       const abortController = new AbortController();
       try {
         const response = await readDeck(deckId, abortController.signal);
-        setDeck(response);
+        setDeckName(response.name);
+        setDeckDescription(response.description)
       } catch (error) {
         console.error("There was an error", error);
       }
@@ -25,21 +27,16 @@ function EditDeck() {
   }, [deckId]);
 
   const handleNameChange = (event) => {
-    setDeck({
-      ...deck,
-      name: event.target.value,
-    });
+    setDeckName(event.target.value);
   };
 
   const handleDescriptionChange = (event) => {
-    setDeck({
-      ...deck,
-      description: event.target.value,
-    });
+    setDeckDescription(event.target.value);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const deck = {id: deckId, name: deckName, description: deckDescription};
     await updateDeck(deck);
     history.push(`/decks/${deckId}`);
   };
@@ -52,7 +49,7 @@ function EditDeck() {
             <Link to="/">Home</Link>
           </li>
           <li className="breadcrumb-item">
-            <Link to={`/decks/${deckId}`}>{deck.name}</Link>
+            <Link to={`/decks/${deckId}`}>{deckName}</Link>
           </li>
           <li className="breadcrumb-item active">Edit Deck</li>
         </ol>
@@ -67,7 +64,7 @@ function EditDeck() {
             type="text"
             id="name"
             className="form-control"
-            value={deck.name || ""}
+            value={deckName}
             onChange={handleNameChange}
           />
         </div>
@@ -77,7 +74,7 @@ function EditDeck() {
             type="textarea"
             id="description"
             className="form-control"
-            value={deck.description || ""}
+            value={deckDescription}
             onChange={handleDescriptionChange}
           />
         </div>

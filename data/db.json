@@ -11,9 +11,9 @@
       "id": 2
     },
     {
-      "name": "Test Deck Name edit 1 edit 2",
-      "description": "Test Deck Description edit 1 edit 2",
-      "id": 4
+      "id": 4,
+      "name": "Test Deck Name edit 1 edit 2 edit 3",
+      "description": "Test Deck Description edit 1 edit 2 edit 3"
     }
   ],
   "cards": [
