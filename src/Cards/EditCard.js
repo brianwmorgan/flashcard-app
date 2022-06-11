@@ -53,7 +53,7 @@ function EditCard() {
       <nav>
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/">Home</Link>
+            <Link to="/"><span className="oi oi-home mr-1"/>Home</Link>
           </li>
           <li className="breadcrumb-item">
             <Link to={`/decks/${deckId}`}>{deck.name}</Link>

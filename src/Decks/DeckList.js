@@ -52,6 +52,7 @@ function DeckList() {
             className="btn btn-secondary mx-1 mt-3"
             onClick={() => history.push(`/decks/${deck.id}`)}
           >
+            <span className="oi oi-eye mr-2"></span>
             View
           </button>
           <button
@@ -59,6 +60,7 @@ function DeckList() {
             className="btn btn-primary mx-1 mt-3"
             onClick={() => history.push(`/decks/${deck.id}/study`)}
           >
+            <span className="oi oi-book mr-2"></span>
             Study
           </button>
           <button
@@ -66,6 +68,7 @@ function DeckList() {
             className="btn btn-danger mx-1 mt-3 float-right"
             onClick={() => handleDelete(deck.id)}
           >
+            <span className="oi oi-trash mr-2"></span>
             Delete
           </button>
         </div>

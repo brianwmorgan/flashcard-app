@@ -7,7 +7,7 @@ function StudyNotEnoughCards({ deck, numberOfCards }) {
       <nav>
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/">Home</Link>
+            <Link to="/"><span className="oi oi-home mr-1"/>Home</Link>
           </li>
           <li className="breadcrumb-item">
             <Link to={`/decks/${deck.id}`}>{deck.name}</Link>
@@ -33,8 +33,9 @@ function StudyNotEnoughCards({ deck, numberOfCards }) {
       <Link
         to={`/decks/${deck.id}/cards/new`}
         type="button"
-        className="btn btn-primary mx-1"
+        className="btn btn-success mx-1"
       >
+        <span className="oi oi-plus mr-2"/>
         Add Cards
       </Link>
     </div>

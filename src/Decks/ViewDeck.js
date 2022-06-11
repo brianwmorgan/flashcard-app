@@ -49,7 +49,7 @@ function ViewDeck() {
       <nav>
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/">Home</Link>
+            <Link to="/"><span className="oi oi-home mr-1"></span>Home</Link>
           </li>
           <li className="breadcrumb-item active">{deck.name}</li>
         </ol>
@@ -64,6 +64,7 @@ function ViewDeck() {
             type="button"
             className="btn btn-secondary mx-1"
           >
+            <span className="oi oi-pencil mr-2"></span>
             Edit
           </Link>
           <Link
@@ -71,13 +72,15 @@ function ViewDeck() {
             type="button"
             className="btn btn-primary mx-1"
           >
+            <span className="oi oi-book mr-2"></span>
             Study
           </Link>
           <Link
             to={`/decks/${deckId}/cards/new`}
             type="button"
-            className="btn btn-primary mx-1"
+            className="btn btn-success mx-1"
           >
+            <span className="oi oi-plus mr-2"></span>
             Add Cards
           </Link>
           <button
@@ -85,6 +88,7 @@ function ViewDeck() {
             className="btn btn-danger mx-1 float-right"
             onClick={() => handleDeleteDeck(deck.id)}
           >
+            <span className="oi oi-trash mr-2"></span>
             Delete
           </button>
         </div>
@@ -105,6 +109,7 @@ function ViewDeck() {
                     className="btn btn-danger mx-2 my-2 float-right"
                     onClick={() => handleDeleteCard(card.id)}
                   >
+                    <span className="oi oi-trash mr-2"></span>
                     Delete
                   </button>
                   <button
@@ -114,6 +119,7 @@ function ViewDeck() {
                       history.push(`/decks/${deck.id}/cards/${card.id}/edit`)
                     }
                   >
+                    <span className="oi oi-pencil mr-2"></span>
                     Edit
                   </button>
                 </div>

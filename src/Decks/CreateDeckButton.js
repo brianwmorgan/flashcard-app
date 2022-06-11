@@ -8,9 +8,10 @@ function CreateDeckButton() {
     <div>
       <button
         type="button"
-        className="btn btn-secondary my-2"
+        className="btn btn-success my-2"
         onClick={() => history.push("/decks/new")}
       >
+        <span className="oi oi-plus mr-2" />
         Create Deck
       </button>
     </div>
