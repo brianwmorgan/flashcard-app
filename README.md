@@ -1,5 +1,5 @@
 # flashcard-app
-This CRUD application is a capstone project for the frontend development section of Thinkful's software engineering program. It allows users to create, read, update, and delete decks of flashcards so they can master material they are learning.
+This CRUD application is a capstone project for the frontend development section of Thinkful's software engineering program. It allows users to create, read, update, and delete decks of flashcards so they can master new material.
 
 ## Technology
 ### Built with:
