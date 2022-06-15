@@ -2,12 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function StudyNotEnoughCards({ deck, numberOfCards }) {
+  // return the nav bar, headers, helpful message, and 'Add Cards' button
   return (
     <div>
       <nav>
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/"><span className="oi oi-home mr-1"/>Home</Link>
+            <Link to="/">
+              <span className="oi oi-home mr-1" />
+              Home
+            </Link>
           </li>
           <li className="breadcrumb-item">
             <Link to={`/decks/${deck.id}`}>{deck.name}</Link>
@@ -35,7 +39,7 @@ function StudyNotEnoughCards({ deck, numberOfCards }) {
         type="button"
         className="btn btn-success mx-1"
       >
-        <span className="oi oi-plus mr-2"/>
+        <span className="oi oi-plus mr-2" />
         Add Cards
       </Link>
     </div>

@@ -16,6 +16,7 @@ function AddCard() {
 
   const [formData, setFormData] = useState(initialFormState);
 
+  // load deck data
   useEffect(() => {
     async function fetchData() {
       const abortController = new AbortController();
@@ -32,6 +33,7 @@ function AddCard() {
     fetchData();
   }, [deckId]);
 
+  // change handler for 'Front' form field
   const handleFrontChange = (event) => {
     setFormData({
       ...formData,
@@ -39,6 +41,7 @@ function AddCard() {
     });
   };
 
+  // change handler for 'Back' form field
   const handleBackChange = (event) => {
     setFormData({
       ...formData,
@@ -46,12 +49,14 @@ function AddCard() {
     });
   };
 
+  // submit handler for 'Add Card' form
   const handleSubmit = async (event) => {
     event.preventDefault();
     await createCard(deckId, formData);
     setFormData(initialFormState);
   };
 
+  // return the nav bar and header, and render the CardForm component
   return (
     <div>
       <nav>

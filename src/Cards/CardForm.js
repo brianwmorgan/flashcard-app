@@ -1,6 +1,7 @@
 import React from "react";
 
 function CardForm({ formData, handleFrontChange, handleBackChange }) {
+  // return a card form that can be used to either add a new card or edit an existing card
   return (
     <div>
       <form>

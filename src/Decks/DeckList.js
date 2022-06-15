@@ -7,6 +7,7 @@ function DeckList() {
   const history = useHistory();
   const [decks, setDecks] = useState([]);
 
+  // load deck data
   useEffect(() => {
     async function fetchData() {
       const abortController = new AbortController();
@@ -23,6 +24,7 @@ function DeckList() {
     fetchData();
   }, []);
 
+  // delete handler
   const handleDelete = async (event) => {
     if (
       window.confirm(`Delete this deck? You will not be able to recover it.`)
@@ -32,6 +34,7 @@ function DeckList() {
     }
   };
 
+  // map decks to display as a list
   const deckList = decks.map((deck) => {
     return (
       <div className="card my-1" key={deck.id}>

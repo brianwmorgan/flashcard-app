@@ -9,6 +9,7 @@ function EditDeck() {
   const [deckName, setDeckName] = useState("");
   const [deckDescription, setDeckDescription] = useState("");
 
+  // load deck data
   useEffect(() => {
     async function fetchData() {
       const abortController = new AbortController();
@@ -26,14 +27,17 @@ function EditDeck() {
     fetchData();
   }, [deckId]);
 
+  // change handler for 'Name' form field
   const handleNameChange = (event) => {
     setDeckName(event.target.value);
   };
 
+  // change handler for 'Description' form field
   const handleDescriptionChange = (event) => {
     setDeckDescription(event.target.value);
   };
 
+  // form submit handler
   const handleSubmit = async (event) => {
     event.preventDefault();
     const deck = {id: deckId, name: deckName, description: deckDescription};
@@ -41,6 +45,7 @@ function EditDeck() {
     history.push(`/decks/${deckId}`);
   };
 
+  // return the nav bar, header, and 'Edit Deck' form
   return (
     <div>
       <nav>

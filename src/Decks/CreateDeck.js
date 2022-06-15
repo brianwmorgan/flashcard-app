@@ -13,6 +13,7 @@ function CreateDeck() {
 
   const [formData, setFormData] = useState({ ...initialFormState });
 
+  // change handler for 'Name' form field
   const handleNameChange = (event) => {
     setFormData({
       ...formData,
@@ -20,6 +21,7 @@ function CreateDeck() {
     });
   };
 
+  // change handler for 'Description' form field
   const handleDescriptionChange = (event) => {
     setFormData({
       ...formData,
@@ -27,6 +29,7 @@ function CreateDeck() {
     });
   };
 
+  // form submit handler
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -34,12 +37,15 @@ function CreateDeck() {
     history.push(`/decks/${newDeck.id}`);
   };
 
+  // return the nav bar, header, and 'Create Deck' form
   return (
     <div>
       <nav>
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/"><span className="oi oi-home mr-1"></span>Home</Link>
+            <Link to="/">
+              <span className="oi oi-home mr-1"></span>Home
+            </Link>
           </li>
           <li className="breadcrumb-item active">Create Deck</li>
         </ol>

@@ -11,6 +11,7 @@ function StudyEnoughCards({ deck, numberOfCards }) {
 
   const [studyState, setStudyState] = useState(initialState);
 
+  // click handler for 'Flip' button
   const handleFlip = (event) => {
     event.preventDefault();
     if (studyState.onFront) {
@@ -26,6 +27,7 @@ function StudyEnoughCards({ deck, numberOfCards }) {
     }
   };
 
+  // click handler for 'Next' button
   const handleNext = (event) => {
     event.preventDefault();
     if (studyState.cardNumber < deck.cards.length - 1) {
@@ -46,6 +48,7 @@ function StudyEnoughCards({ deck, numberOfCards }) {
     }
   };
 
+  // return the nav bar, header, and card info
   return (
     <div>
       <nav>

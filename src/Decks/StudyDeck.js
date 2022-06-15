@@ -10,6 +10,7 @@ function StudyDeck() {
   const [deck, setDeck] = useState({});
   const [numberOfCards, setNumberOfCards] = useState(0);
 
+  // load deck data
   useEffect(() => {
     async function fetchData() {
       const abortController = new AbortController();
@@ -27,6 +28,8 @@ function StudyDeck() {
     fetchData();
   }, [deckId]);
 
+  // if the deck has two or more cards, render the StudyEnoughCards component
+  // if not, render the StudyNotEnoughCards component
   if (numberOfCards > 2) {
     return (
       <div>

@@ -9,6 +9,7 @@ function ViewDeck() {
   const [deck, setDeck] = useState([]);
   const [cards, setCards] = useState([]);
 
+  // load the deck and card data
   useEffect(() => {
     async function fetchData() {
       const abortController = new AbortController();
@@ -26,6 +27,7 @@ function ViewDeck() {
     fetchData();
   }, [deckId]);
 
+  // delete handler for deck
   const handleDeleteDeck = async (event) => {
     if (
       window.confirm(`Delete this deck? You will not be able to recover it.`)
@@ -35,6 +37,7 @@ function ViewDeck() {
     }
   };
 
+  // delete handler for card
   const handleDeleteCard = async (event) => {
     if (
       window.confirm(`Delete this card? You will not be able to recover it.`)
@@ -44,6 +47,7 @@ function ViewDeck() {
     }
   };
 
+  // return the nav bar, deck info and button options, header, and all cards in the deck
   return (
     <div>
       <nav>
