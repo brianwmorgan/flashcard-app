@@ -65,6 +65,7 @@ The Edit Deck screen has the following features:
 
 The View Deck screen allows the user to view all of the information about a deck. It is displayed at `/decks/:deckId`.  
 
+![view deck screenshot](/images/view-deck.png)  
 
 The View Deck screen has the following features:
 - A breadcrumb navigation bar with a link to the Home page, followed by the name of the deck.
@@ -81,12 +82,15 @@ The View Deck screen has the following features:
   * Has a `Delete` button that allows that card to be deleted.
 
 ### Delete Card Prompt
-(PLACEHOLDER FOR SCREENSHOT)  
+
 When the user clicks the `Delete` button associated with a card, a warning message is shown and the user can either click `OK` or `Cancel`. If the user clicks `OK`, the card is deleted and will no longer be visible on the View Deck screen. If the user clicks `Cancel`, the action will be canceled.  
 
 ### Study Screen:
-(PLACEHOLDER FOR SCREENSHOT)  
+
 The Study screen allows the user to study the cards in a deck. It is displayed at `/decks/:deckId/study`.  
+
+![view deck screenshot](/images/view-deck.png)  
+
 The Study screen has the following features:
 - A breadcrumb navigation bar with a link to the Home screen, followed by a link to that deck's View Deck screen, and finally the text: `Study`. 
 - The deck's title is shown on the screen.
@@ -95,21 +99,24 @@ The Study screen has the following features:
 - After flipping the card, the screen shows a `Next` button that allows the user to continue to the next card.
 
 ### Next Button:
-(PLACEHOLDER FOR SCREENSHOT)  
+
 After clicking the `Flip` button on the Study screen, the back of the card will be displayed and include a `Next` button. Clicking the `Next` button will display the front of the next card in the deck. Clicking the `Flip` button again will re-display the front of the card.
 
 ### Restart Prompt:
-(PLACEHOLDER FOR SCREENSHOT)  
+
 After the final card in the deck has been shown, a prompt is displayed offering the user an opportunity to restart the deck. If the user does not restart the deck, they are returned to the Home screen.
 
 ### Not Enough Cards:
-(PLACEHOLDER FOR SCREENSHOT)  
+
 If a user tries to study a deck with two or fewer cards, the Study screen will display a `Not enough cards` message and an `Add Cards` button. Clicking the `Add Cards` button will take the user to the Add Card screen at `decks/:deckId/cards/new`.  
 
 ### Add Card Screen:
-(PLACEHOLDER FOR SCREENSHOT)  
+
 The Add Card screen allows the user to add a new card to an existing deck. It is displayed at `/decks/:deckId/cards/new`.  
-The  screen has the following features:
+
+![add card screenshot](/images/add-card.png)  
+
+The Add Card screen has the following features:
 - A breadcrumb navigation bar with a link to the Home screen, followed by a link to that card's View Deck screen, and finally the text `Add Card`.
 - The screen displays the deck title followed by the text `Add Card`.
 - The screen displays a form with the `Front` and `Back` fields for a new card.
@@ -117,8 +124,11 @@ The  screen has the following features:
 - If the user clicks the `Save` button, a new card is created and added to the end of that deck. Then the form is cleared and the process for adding a new card is restarted.
 
 ### Edit Card Screen:
-(PLACEHOLDER FOR SCREENSHOT)  
+
 The Edit Card screen allows the user to modify the information of an existing card. It is displayed at `/decks/:deckId/cards/:cardId/edit`.  
+
+![edit card screenshot](/images/edit-card.png)  
+
 The Edit Card screen has the following features:
 - A breadcrumb navigation bar with a link to the Home screen, followed by a link to that card's View Deck screen, and finally the text: `Edit Card :cardId`. 
 - It displays the same form as the Add Card screen, except it is pre-filled with information for the existing card
