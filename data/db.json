@@ -3,12 +3,17 @@
     {
       "name": "Rendering in React",
       "id": 1,
-      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation."
     },
     {
       "name": "React Router",
       "description": "React Router is a collection of navigational components that compose declaratively with your application.",
       "id": 2
+    },
+    {
+      "id": 3,
+      "name": "React + APIs with Hooks",
+      "description": "Learn to use the React effect hook, manually change the DOM, fetch data, and update React components."
     }
   ],
   "cards": [
