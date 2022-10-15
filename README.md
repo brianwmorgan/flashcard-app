@@ -100,7 +100,9 @@ The Study screen has the following features:
 
 ### Next Button:
 
-After clicking the `Flip` button on the Study screen, the back of the card will be displayed and include a `Next` button. Clicking the `Next` button will display the front of the next card in the deck. Clicking the `Flip` button again will re-display the front of the card.
+After clicking the `Flip` button on the Study screen, the back of the card will be displayed and include a `Next` button. Clicking the `Next` button will display the front of the next card in the deck. Clicking the `Flip` button again will re-display the front of the card.  
+
+![next button screenshot](/images/study-next.png)  
 
 ### Restart Prompt:
 
@@ -109,6 +111,8 @@ After the final card in the deck has been shown, a prompt is displayed offering 
 ### Not Enough Cards:
 
 If a user tries to study a deck with two or fewer cards, the Study screen will display a `Not enough cards` message and an `Add Cards` button. Clicking the `Add Cards` button will take the user to the Add Card screen at `decks/:deckId/cards/new`.  
+
+![not enough cards screenshot](/images/not-enough-cards.png)  
 
 ### Add Card Screen:
 
