@@ -36,19 +36,23 @@ The Home page has the following features:
 ### Delete Deck Prompt:
 When the user clicks on the `Delete` button associated with a particular deck, a warning message is shown and the user can either click `OK` or `Cancel`. If the user clicks `OK`, the deck is deleted and will no longer be visible on the Home page. If the user clicks `Cancel`, the action will be canceled.
 
-### Create Deck / Edit Deck Screens:
+### Create Deck Screen
 
 The Create Deck screen allows the user to create new decks. It is displayed at `/decks/new`.  
-The Edit Deck screen allows the user to modify the information of an existing deck. It is displayed at `/decks/:deckId/edit`.  
 
-![create deck screenshot](/images/create-deck.png)
-![edit deck screenshot](/images/edit-deck.png)
+![create deck screenshot](/images/create-deck.png)  
   
 The Create Deck screen has the following features:
 - A breadcrumb navigation bar with a link to the Home page, followed by the text: `Create Deck`.
 - A form is shown with the appropriate fields for creating a new deck.
 - If the user clicks the `Submit` button, the user is taken to this new deck's View Deck screen.
 - If the user clicks the `Cancel` button, the user is taken back to the Home page.  
+
+### Edit Deck Screen
+
+The Edit Deck screen allows the user to modify the information of an existing deck. It is displayed at `/decks/:deckId/edit`.  
+
+![edit deck screenshot](/images/edit-deck.png)  
 
 The Edit Deck screen has the following features:
 - A breadcrumb navigation bar with a link to the Home page, followed by a link to the deck being edited's View Deck screen, and finally, the text: `Edit Deck`.
@@ -58,8 +62,10 @@ The Edit Deck screen has the following features:
 - If the user clicks the `Submit` button, the new deck is created and the user is taken back to the View Deck screen.
 
 ### View Deck Screen:
-(PLACEHOLDER FOR SCREENSHOT)  
+
 The View Deck screen allows the user to view all of the information about a deck. It is displayed at `/decks/:deckId`.  
+
+
 The View Deck screen has the following features:
 - A breadcrumb navigation bar with a link to the Home page, followed by the name of the deck.
 - This screen includes the deck's name and description.
