@@ -89,7 +89,7 @@ When the user clicks the `Delete` button associated with a card, a warning messa
 
 The Study screen allows the user to study the cards in a deck. It is displayed at `/decks/:deckId/study`.  
 
-![view deck screenshot](/images/view-deck.png)  
+![study deck screenshot](/images/study-deck.png)  
 
 The Study screen has the following features:
 - A breadcrumb navigation bar with a link to the Home screen, followed by a link to that deck's View Deck screen, and finally the text: `Study`. 
