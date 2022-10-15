@@ -4,7 +4,7 @@ This CRUD application is a capstone project for the frontend development section
 
 ## Links
 
-[Live Heroku Client App](https://res-app-client-morgan.herokuapp.com/)  
+[Live Vercel Client App](https://flashcard-app-sable.vercel.app/)  
 
 ## Technology
 
