@@ -13,40 +13,55 @@ This CRUD application is a capstone project for the frontend development section
 ![CSS icon](images/css.png)  
 
 ## Installation
+
 1. Fork and clone this repository.
 2. Run `npm install` to install project dependencies.
 3. Run `npm start` to start the application.
 
 ## How the App Works
-### Home Screen
-![edit card screen](/screenshots/new/edit-card-screen.jpg)  
-(PLACEHOLDER FOR SCREENSHOT)  
-The Home screen is the first page the user sees. It is displayed at `/`.  
-The Home screen has the following features:
+
+### Home Page
+
+The Home page is the first page the user sees. It is displayed at `/`.  
+
+![home page screenshot](/images/home-page.png)  
+
+The Home page has the following features:
 - A `Create Deck` button brings the user to the Create Deck screen at `/decks/new`.
-- Existing decks are each shown with the deck name, the number of cards, and a `View`, `Study`, and `Delete` button.
+- Existing decks are each shown with the deck name, the number of cards, and `View`, `Study`, and `Delete` buttons.
 - Clicking the `View` button brings the user to the View Deck screen at `/decks/:deckId`.
 - Clicking the `Study` button brings the user to the Study screen at `decks/:deckId/study`.
 - Clicking the `Delete` button displays a prompt with a warning message that gives the user an option to delete the deck or cancel this action.
 
 ### Delete Deck Prompt:
-(PLACEHOLDER FOR SCREENSHOT)  
-When the user clicks on the `Delete` button associated with a particular deck, a warning message is shown and the user can either click `OK` or `Cancel`. If the user clicks `OK`, the deck is deleted and will no longer be visible on the Home screen. If the user clicks `Cancel`, the action will be canceled.
+When the user clicks on the `Delete` button associated with a particular deck, a warning message is shown and the user can either click `OK` or `Cancel`. If the user clicks `OK`, the deck is deleted and will no longer be visible on the Home page. If the user clicks `Cancel`, the action will be canceled.
 
-### Create Deck Screen:
-(PLACEHOLDER FOR SCREENSHOT)  
+### Create Deck / Edit Deck Screens:
+
 The Create Deck screen allows the user to create new decks. It is displayed at `/decks/new`.  
+The Edit Deck screen allows the user to modify the information of an existing deck. It is displayed at `/decks/:deckId/edit`.  
+
+![create deck screenshot](/images/create-deck.png)
+![edit deck screenshot](/images/edit-deck.png)
+  
 The Create Deck screen has the following features:
-- A breadcrumb navigation bar with a link to the Home screen, followed by the text: `Create Deck`.
+- A breadcrumb navigation bar with a link to the Home page, followed by the text: `Create Deck`.
 - A form is shown with the appropriate fields for creating a new deck.
 - If the user clicks the `Submit` button, the user is taken to this new deck's View Deck screen.
-- If the user clicks the `Cancel` button, the user is taken back to the Home screen.
+- If the user clicks the `Cancel` button, the user is taken back to the Home page.  
+
+The Edit Deck screen has the following features:
+- A breadcrumb navigation bar with a link to the Home page, followed by a link to the deck being edited's View Deck screen, and finally, the text: `Edit Deck`.
+- It displays the same form as the Create Deck screen, except it is pre-filled with information for the existing deck.
+- The user can edit and update the form.
+- If the user clicks the `Cancel` button, the action is canceled and the user is taken back to the View Deck screen.
+- If the user clicks the `Submit` button, the new deck is created and the user is taken back to the View Deck screen.
 
 ### View Deck Screen:
 (PLACEHOLDER FOR SCREENSHOT)  
 The View Deck screen allows the user to view all of the information about a deck. It is displayed at `/decks/:deckId`.  
 The View Deck screen has the following features:
-- A breadcrumb navigation bar with a link to the Home screen, followed by the name of the deck.
+- A breadcrumb navigation bar with a link to the Home page, followed by the name of the deck.
 - This screen includes the deck's name and description.
 - The screen includes `Edit`, `Study`, `Add Cards`, and `Delete` buttons. Each button takes the user to a different destination, as follows:
   * `Edit` --> Edit Deck screen, `/decks/:deckId/edit`.
@@ -61,17 +76,7 @@ The View Deck screen has the following features:
 
 ### Delete Card Prompt
 (PLACEHOLDER FOR SCREENSHOT)  
-When the user clicks the `Delete` button associated with a card, a warning message is shown and the user can either click `OK` or `Cancel`. If the user clicks `OK`, the card is deleted and will no longer be visible on the View Deck screen. If the user clicks `Cancel`, the action will be canceled.
-
-### Edit Deck Screen:
-(PLACEHOLDER FOR SCREENSHOT)  
-The Edit Deck screen allows the user to modify the information of an existing deck. It is displayed at `/decks/:deckId/edit`.  
-The Edit Deck screen has the following features:
-- A breadcrumb navigation bar with a link to the Home screen, followed by a link to the deck being edited's View Deck screen, and finally, the text: `Edit Deck`.
-- It displays the same form as the Create Deck screen, except it is pre-filled with information for the existing deck.
-- The user can edit and update the form.
-- If the user clicks the `Cancel` button, the action is canceled and the user is taken back to the View Deck screen.
-- If the user clicks the `Submit` button, the new deck is created and the user is taken back to the View Deck screen.
+When the user clicks the `Delete` button associated with a card, a warning message is shown and the user can either click `OK` or `Cancel`. If the user clicks `OK`, the card is deleted and will no longer be visible on the View Deck screen. If the user clicks `Cancel`, the action will be canceled.  
 
 ### Study Screen:
 (PLACEHOLDER FOR SCREENSHOT)  
