@@ -1,9 +1,30 @@
-# flashcard-app
-This CRUD application is a capstone project for the frontend development section of Thinkful's software engineering program. It allows users to create, read, update, and delete decks of flashcards so they can study any subject.
+# Flip and Flourish | Flashcard Study Aid
+
+This CRUD application is a capstone project for the frontend development section of Thinkful's software engineering program. It allows users to create, read, update, and delete decks of flashcards so they can study any subject.  
+
+## Links
+
+[Live Heroku Client App](https://res-app-client-morgan.herokuapp.com/)  
 
 ## Technology
-### Built with:
-- HTML, CSS, JavaScript, React, Bootstrap, Open Iconic
+
+- Javascript, React, React Router, React Hooks, Bootstrap, Open Iconic, HTML, CSS  
+  
+![JS icon](images/javascript.png)
+![React icon](images/react.png)
+![Bootstrap icon](images/bootstrap.png)
+![HTML icon](images/html.png)
+![CSS icon](images/css3.png)  
+
+## Installation
+
+1. Fork and clone this repository.
+1. Run `cp ./back-end/.env.sample ./back-end/.env`.
+1. Update the `./back-end/.env` file with the connection URL's to your ElephantSQL database instance.
+1. Run `cp ./front-end/.env.sample ./front-end/.env`.
+1. You should not need to make changes to the `./front-end/.env` file unless you want to connect to a backend at a location other than `http://localhost:5001`.
+1. Run `npm install` to install project dependencies.
+1. Run `npm run start:dev` to start your server in development mode.
 
 ## Installation
 1. Fork and clone this repository.
