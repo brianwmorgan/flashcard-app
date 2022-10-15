@@ -14,7 +14,7 @@ This CRUD application is a capstone project for the frontend development section
 ![React icon](images/react.png)
 ![Bootstrap icon](images/bootstrap.png)
 ![HTML icon](images/html.png)
-![CSS icon](images/css3.png)  
+![CSS icon](images/css.png)  
 
 ## Installation
 
