@@ -2,6 +2,10 @@
 
 This CRUD application is a capstone project for the frontend development section of Thinkful's software engineering program. It allows users to create, read, update, and delete decks of flashcards so they can study any subject.  
 
+## Links
+
+[Live App](https://res-app-client-morgan.herokuapp.com/) deployed to Vercel  
+
 ## Technology
 
 - Javascript, React, React Router, React Hooks, Bootstrap, Open Iconic, HTML, CSS  
