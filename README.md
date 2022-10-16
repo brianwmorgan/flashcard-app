@@ -1,6 +1,6 @@
 # Flip and Flourish | Flashcard Study Aid
 
-This CRUD application is a capstone project for the frontend development section of Thinkful's software engineering program. It allows users to create, read, update, and delete decks of flashcards so they can study any subject.  
+Flip and Flourish is a live study aid application. It allows a user to create, edit, study, and delete decks of flashcards so they can master new material.   
 
 ## Links
 
