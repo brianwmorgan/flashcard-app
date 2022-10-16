@@ -1,6 +1,6 @@
 # Flip and Flourish | Flashcard Study Aid
 
-Flip and Flourish is a live study aid application. It allows a user to create, edit, study, and delete decks of flashcards so they can master new material.   
+Flip and Flourish is a live study aid application. It allows a user to create, edit, study, and delete decks of flashcards.   
 
 ## Links
 
